@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🔹 NAVBAR -->
+    <nav>
+        <div class="logo-placeholder"></div> 
+        <div class="nav-links">
+            <a href="index.html">Home</a> |
+            <a href="marketplace.html">Marketplace</a> |
+            <a href="mynfts.html">My NFTs</a> 
+            <a >    </a>  |
+        </div>
+    </nav>
+
+    <!-- 🔹 MAIN CONTENT -->
+    <main>
+        <h1>Create a Listing</h1>
+        <p>Upload details about the disaster and set up a starting bid.</p>
+
+        <form id="disaster-form" class="form">
+            <label>Upload Video for Verification:</label>
+            <input type="file" id="video-upload" accept="video/*" required>
+        
+            <label>Disaster Type:</label>
+            <input type="text" id="disaster-type" placeholder="E.g., Earthquake" required>
+        
+            <label>Location:</label>
+            <input type="text" id="disaster-location" placeholder="E.g., Tokyo, Japan" required>
+        
+            <label>Set Instant Buy Price (ResQ Coins):</label>
+            <input type="number" id="instant-buy-price" placeholder="Enter price" required min="1">
+        
+            <button type="submit" class="generate-nft-btn">Generate NFT</button>
+        </form>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

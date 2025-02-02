@@ -1,0 +1,670 @@
+body {
+    background-color: #081830; /* Darker Navy Blue */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 🔹 NAVBAR STYLING */
+.navbar {
+    display: flex;
+    justify-content: center; /* ✅ Centers nav links */
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* 🔹 Logo Styling */
+.logo-container img {
+    height: 60px; /* Adjust size */
+    width: auto;
+}
+
+/* 🔹 NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Increased spacing between items */
+    flex-wrap: wrap; /* Prevents cutting off */
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #E65100; /* Matches theme */
+}
+
+/* 🔹 RESPONSIVE FIX */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        gap: 20px; /* Reduced for smaller screens */
+    }
+}
+
+/* 🔹 MAIN CONTENT */
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5.5rem; /* HUGE title */
+    font-weight: 800;
+    color: #E65100; /* Darker Orange */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 2rem; /* Larger paragraph text */
+    font-weight: 500;
+    max-width: 70%;
+    line-height: 1.5;
+}
+
+/* 🔹 BEAUTIFUL BUTTON */
+.create-listing-btn {
+    background: linear-gradient(135deg, #000000, #222222); /* Subtle black gradient */
+    border: none;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    padding: 20px 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 50px; /* More modern rounded shape */
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.create-listing-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 NAV BAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Increased padding */
+    font-size: 22px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 100;
+}
+
+/* 🔹 PADDING BELOW NAV BAR */
+main {
+    padding-top: 100px; /* Pushes content lower */
+}
+
+/* 🔹 FORM CONTAINER */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* 🔹 FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    width: 45%; /* Increased width for a more balanced look */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 LABELS */
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+/* 🔹 INPUT FIELDS */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 🔹 FILE UPLOAD */
+input[type="file"] {
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    cursor: pointer;
+}
+
+.create-listing-btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.create-listing-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/* 🔹 INCREASE FORM WIDTH */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%; /* Increased from 45% to 60% */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 GENERATE NFT BUTTON FIX */
+.generate-nft-btn {
+    background: black;
+    color: white;
+    font-size: 22px;
+    padding: 15px 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.generate-nft-btn:hover {
+    background: white;
+    color: black;
+    border-color: black;
+    transform: scale(1.05);
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Main Buttons */
+.main-btn {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Resources Section */
+.resources-container {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #0b1736; /* Darker blue for contrast */
+}
+
+.resources-container h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.resources-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Resource Cards */
+.resource-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+}
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Main Buttons */
+.main-btn {
+    display: inline-block;
+    font-size: 26px; /* Increased size */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px; /* Increased padding */
+    background-color: #E65100;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Resources Section */
+.resources-container {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: #0b1736; /* Darker navy blue */
+}
+
+.resources-container h2 {
+    font-size: 38px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Cards */
+.resources-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Resource Cards */
+.resource-card {
+    background: white;
+    color: black;
+    padding: 40px; /* More padding for content */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15);
+    text-align: center; /* Centered content */
+    width: 350px; /* Increased width */
+    height: 450px; /* Taller cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Evenly space content */
+    transition: transform 0.3s ease-in-out;
+}
+
+.resource-card h3 {
+    font-size: 26px; /* Bigger headers */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 18px;
+    text-align: justify; /* No awkward gaps */
+    flex-grow: 1; /* Ensures text fills space properly */
+}
+
+/* Resource Buttons */
+.resource-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.resource-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Hover Effect */
+.resource-card:hover {
+    transform: scale(1.05); /* Subtle hover pop */
+}
+
+
+/* 🚀 NFT Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.nft-box {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nft-art {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.marketplace-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.nft-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    margin: 15px;
+    color: navy;
+}
+
+.nft-img {
+    font-size: 5rem; /* Make the 🎨 emoji BIG */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Fixed height for alignment */
+}
+
+
+.nft-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.nft-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #FF9F1C; /* Darker Orange */
+}
+
+.nft-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.purchase-btn {
+    background: #FF9F1C; /* Darker Orange */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.purchase-btn:hover {
+    background: #E08917;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+#resq-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff8c00; /* Solid Orange */
+    padding: 8px 14px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+#resq-emoji {
+    font-size: 1.5rem;
+}
+
+#resq-text {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1.5rem;
+}
+
+#add-coins-btn {
+    background: white;
+    color: #ff8c00;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 10x;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, transform 0.2s;
+}
+
+#add-coins-btn:hover {
+    background: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+/* 🔹 NFT Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* 🔹 NFT Card */
+.nft-card {
+    background: white;
+    color: black;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🔹 Fullscreen Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the section */
+    z-index: -1; /* Sends it behind the content */
+}
+
+/* 🔹 Ensure Hero Section Covers Full Viewport */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay to improve contrast */
+}
+
+
+.nft-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Default View: Show Only Name & Location */
+.nft-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FF9F1C; /* Darker Orange */
+}
+
+/* 🔹 NFT Art Placeholder */
+.nft-art {
+    font-size: 4rem; /* Big art emoji */
+    margin-bottom: 10px;
+}
+
+/* 🔹 Hidden Info (Initially Collapsed) */
+.hidden-info {
+    display: none;
+    font-size: 14px;
+    text-align: left;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Expanded State */
+.nft-card.expanded .hidden-info {
+    display: block;
+}
+
+/* 🔹 More Info Button */
+.more-info-btn {
+    background: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.more-info-btn:hover {
+    background: white;
+    color: #ff8c00;
+}
+
+/* 🔹 Relist Button */
+.relist-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.relist-btn:hover {
+    background: white;
+    color: black;
+}
